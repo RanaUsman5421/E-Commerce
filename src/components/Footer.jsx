@@ -1,6 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight, faCaretRight } from '@fortawesome/free-solid-svg-icons'
 import { assets } from '../assets/assets'
 import '../App.css'
 
@@ -9,30 +9,31 @@ const Footer = () => {
         <div className='bg-black mt-20 h-fit px-[8%] font'>
             <div className='h-fit flex justify-between text-white'>
 
-                <div className='h-fit w-[19%] py-15 px-5'>
-                    <h2 className='text-3xl font-semibold'>Exclusive</h2>
-                    <p className='font-semibold mt-3 text-xl'>Subscribe</p>
-                    <p className='mt-5'>Get 10% off your first order</p>
-                    <div className='mt-4 border flex items-center border-gray-400 p-2 rounded-md'>
-                        <input type="text" placeholder='Enter email' className='border-none outline-none' />
-                        <FontAwesomeIcon icon={faArrowRight} className='text-white cursor-pointer' />
+                <div className='h-fit w-[19%] py-10 px-5'>
+                    <h2 className='text-xl font-semibold'>Exclusive</h2>
+                    <p className='font-semibold mt-2 text-md'>Subscribe</p>
+                    <p className='mt-3 text-md'>Get 10% off your first order</p>
+
+                    <div className='mt-3'>
+                        <input type="text" placeholder='Enter Email' className='py-1 px-2 border-gray-300 border rounded-lg w-[90%]'/>
+                        <button className='text-black bg-white py-1 px-6 mt-3 rounded-md text-sm'>Subscribe</button>
                     </div>
                 </div>
 
 
-                <div className='h-fit w-[19%] py-15 px-5'>
-                    <h2 className='text-3xl font-semibold'>Support</h2>
-                    <p className='mt-3 text-lg'>111 Bijoy sarani, Dhaka,  DH 1515, Bangladesh.</p>
-                    <p className='mt-5 text-lg'>exclusive@gmail.com</p>
-                    <p className='mt-5 text-lg'>+88015-88888-9999</p>
+                <div className='h-fit w-[19%] py-10 px-5'>
+                    <h2 className='text-xl font-semibold'>Support</h2>
+                    <p className='mt-3 text-md'>111 Bijoy sarani, Dhaka,  DH 1515, Bangladesh.</p>
+                    <p className='mt-5 text-md'>exclusive@gmail.com</p>
+                    <p className='mt-5 text-md'>+88015-88888-9999</p>
 
                 </div>
 
 
 
-                <div className='h-fit w-[19%] py-15 px-5'>
-                    <h2 className='text-3xl font-semibold'>Account</h2>
-                    <ul className='leading-10 text-lg'>
+                <div className='h-fit w-fit py-10 px-5'>
+                    <h2 className='text-xl font-semibold'>Account</h2>
+                    <ul className='leading-9 text-sm'>
                         <li><a href="">My Account</a></li>
                         <li><a href="">Login/Register</a></li>
                         <li><a href="">Cart</a></li>
@@ -43,9 +44,9 @@ const Footer = () => {
 
 
 
-                <div className='h-fit w-[19%] py-15 px-5'>
-                    <h2 className='text-3xl font-semibold'>Quick Link</h2>
-                    <ul className='leading-10 text-lg'>
+                <div className='h-fit w-fit py-10 px-5'>
+                    <h2 className='text-xl font-semibold'>Quick Link</h2>
+                    <ul className='leading-10 text-md'>
                         <li><a href="">Privacy Policy</a></li>
                         <li><a href="">Terms of use</a></li>
                         <li><a href="">FAQ</a></li>
@@ -54,8 +55,8 @@ const Footer = () => {
                 </div>
 
 
-                <div className='h-fit w-[25%] py-15 px-5'>
-                    <h2 className='text-3xl font-semibold'>Download App</h2>
+                <div className='h-fit w-[25%] py-10 px-5'>
+                    <h2 className='text-xl font-semibold'>Download App</h2>
                     <p className='mt-5 text-md'>Save $3 with App New User Only</p>
 
 
@@ -78,7 +79,7 @@ const Footer = () => {
                 </div>
             </div>
             <hr className='text-gray-500'/>
-            <p className='text-gray-500 p-5 text-center'> &#169; Copyright Rimel 2022. All right reserved</p>
+            <p className='text-gray-500 p-3 text-center'> &#169; Copyright Rimel 2022. All right reserved</p>
         </div>
     )
 }
