@@ -17,7 +17,7 @@ const ProductPage = () => {
     const product = all_products.find(e => e.id === parseInt(productId));
     return (
         <div className='px-[8%] mt-15'>
-            <p className='text-sm'> <span className='text-gray-400 text-sm'>{path} </span>Havic HV G-92 Gamepad</p>
+            <p className='text-sm'> <span className='text-gray-400 text-sm'>{path} </span>{product.name}</p>
 
             <div className=' mt-10 flex justify-between'>
                 <div className='w-[60%] h-fit flex gap-10'>
