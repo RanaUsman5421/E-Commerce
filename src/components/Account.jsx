@@ -1,7 +1,9 @@
 import React from 'react'
 import '../App.css'
+import { useLocation } from 'react-router-dom'
 
 const Account = () => {
+    const path = useLocation().pathname;
     return (
         <div className='px-[8%] mt-10 font'>
             <div className='flex justify-between items-center'>

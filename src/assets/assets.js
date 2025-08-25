@@ -111,6 +111,275 @@ export const assets = {
 }
 
 
+export const all_products = [
+    {
+        id: 1,
+        category: "wishlist",
+        img: Product1,
+        discount: '- 40%',
+        name: 'HAVIT HV-G92 Gamepad',
+        discountprice: '$120',
+        price: '$160',
+        stars: '5',
+        reviews: '88'
+    },
+
+    {
+        id: 2,
+        category: "wishlist",
+        img: Product2,
+        discount: '- 35%',
+        name: 'AK-900 Wired Keyboard',
+        discountprice: '$960',
+        price: '$1160',
+        stars: '4',
+        reviews: '75'
+    },
+
+    {
+        id: 3,
+        category: "wishlist",
+        img: Product3,
+        discount: '- 30%',
+        name: 'IPS LCD Gaming Monitor',
+        discountprice: '$400',
+        price: '$370',
+        stars: '5',
+        reviews: '99'
+    },
+    {
+        id: 4,
+        category: "wishlist",
+        img: Product4,
+        discount: '- 25%',
+        name: 'S-Series Comfort Chair ',
+        discountprice: '$400',
+        price: '$370',
+        stars: '4',
+        reviews: '99'
+    },
+    {
+        id: 5,
+        category: "products",
+        img: Product1,
+        discount: '- 40%',
+        name: 'HAVIT HV-G92 Gamepad',
+        discountprice: '$120',
+        price: '$160',
+        stars: '5',
+        reviews: '88'
+    },
+
+    {
+        id: 6,
+        category: "products",
+        img: Product2,
+        discount: '- 35%',
+        name: 'AK-900 Wired Keyboard',
+        discountprice: '$960',
+        price: '$1160',
+        stars: '4',
+        reviews: '75'
+    },
+
+    {
+        id: 7,
+        category: "products",
+        img: Product3,
+        discount: '- 30%',
+        name: 'IPS LCD Gaming Monitor',
+        discountprice: '$400',
+        price: '$370',
+        stars: '5',
+        reviews: '99'
+    },
+    {
+        id: 8,
+        category: "products",
+        img: Product4,
+        discount: '- 25%',
+        name: 'S-Series Comfort Chair ',
+        discountprice: '$400',
+        price: '$370',
+        stars: '4',
+        reviews: '99'
+    },
+
+    {
+        id: 9,
+        category: "products",
+        img: Product1,
+        discount: '- 40%',
+        name: 'HAVIT HV-G92 Gamepad',
+        discountprice: '$120',
+        price: '$160',
+        stars: '5',
+        reviews: '88'
+    },
+
+    {
+        id: 10,
+        category: "products",
+        img: Product2,
+        discount: '- 35%',
+        name: 'AK-900 Wired Keyboard',
+        discountprice: '$960',
+        price: '$1160',
+        stars: '4',
+        reviews: '75'
+    },
+
+    {
+        id: 11,
+        category: "products",
+        img: Product3,
+        discount: '- 30%',
+        name: 'IPS LCD Gaming Monitor',
+        discountprice: '$400',
+        price: '$370',
+        stars: '5',
+        reviews: '99'
+    },
+    {
+        id: 12,
+        category: "products",
+        img: Product4,
+        discount: '- 25%',
+        name: 'S-Series Comfort Chair ',
+        discountprice: '$400',
+        price: '$370',
+        stars: '4',
+        reviews: '99'
+    },
+    {
+        id: 13,
+        category: "ourproducts",
+        img: DogFood,
+        name: 'Breed Dry Dog Food',
+        price: '$100',
+        reviews: '35',
+        discount: '- 10%',
+        discountprice: '$594'
+    },
+
+    {
+        id: 14,
+        category: "ourproducts",
+        img: Camera,
+        name: 'CANON EOS DSLR Camera',
+        price: '$360',
+        reviews: '95',
+        discount: '- 10%',
+        discountprice: '$594'
+    },
+
+    {
+        id: 15,
+        category: "ourproducts",
+        img: Laptop,
+        name: 'ASUS FHD Gaming Laptop',
+        price: '$700',
+        reviews: '325',
+        discount: '- 10%',
+        discountprice: '$594'
+    },
+
+    {
+        id: 16,
+        category: "ourproducts",
+        img: Shampoo,
+        name: 'Curology Product Set ',
+        price: '$500',
+        reviews: '145',
+        discount: '- 10%',
+        discountprice: '$594'
+    },
+
+    {
+        id: 17,
+        category: "ourproducts",
+        img: ToyCar,
+        name: 'Kids Electric Car',
+        price: '$1160',
+        reviews: '35',
+        discount: '- 10%',
+        discountprice: '$594'
+    },
+
+    {
+        id: 18,
+        category: "ourproducts",
+        img: Shoes,
+        name: 'Jr. Zoom Soccer Cleats',
+        price: '$960',
+        reviews: '65',
+        discount: '- 10%',
+        discountprice: '$594'
+    },
+
+    {
+        id: 19,
+        category: "ourproducts",
+        img: Gamepad,
+        name: 'GP11 Shooter USB Gamepad',
+        price: '$660',
+        reviews: '55',
+        discount: '- 10%',
+        discountprice: '$594'
+    },
+
+    {
+        id: 20,
+        category: "ourproducts",
+        img: Jacket,
+        name: 'Quilted Satin Jacket',
+        price: '$660',
+        reviews: '55',
+        discountprice: '$594',
+        discount: '- 10%'
+    },
+    {
+        id: 21,
+        category: "productssecond",
+        img: Coat,
+        name: 'The north Coat',
+        price: '$360',
+        discountprice: '$260',
+        reviews: '65',
+        discount: '- 20%',
+    },
+    {
+        id: 22,
+        category: "productssecond",
+        img: GucciBag,
+        name: 'Gucci duffle bag',
+        price: '$1160',
+        discountprice: '$960',
+        reviews: '65',
+        discount: '- 20%',
+    },
+    {
+        id: 23,
+        category: "productssecond",
+        img: CpuCooler,
+        name: 'RGB Liquid CPU Cooler',
+        price: '$170',
+        discountprice: '$160',
+        reviews: '65',
+        discount: '- 20%',
+    },
+    {
+        id: 24,
+        category: "productssecond",
+        img: BookShelf,
+        name: 'Small Book Shelf',
+        price: '$460',
+        discountprice: '$360',
+        reviews: '65',
+        discount: '- 20%',
+    }
+]
+
 export const WishlistData = [
     {
         img: Product1,
@@ -374,3 +643,5 @@ export const AboutData = [
         role: "Product Designer",
     }
 ]
+
+

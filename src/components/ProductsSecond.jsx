@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react';
 import '../App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight, faEye, faHeart} from '@fortawesome/free-solid-svg-icons';
-import { assets, ProductsData, ProductsSecondData } from '../assets/assets';
+import { all_products } from '../assets/assets';
+import Item from './Item';
 
 const Products = () => {
 
@@ -26,35 +27,14 @@ const Products = () => {
             <div className='h-100 w-full mt-5 flex justify-around overflow-x-scroll scrollbarhide'>
 
 
-                {
-                    ProductsSecondData.map((product, index) => (
-                        <div key={index} className='h-full w-[22%] min-w-[22%]  p-2'>
-                            <div className='h-full'>
-                                <div className='h-[60%] relative bg-gray-100 rounded-sm'>
-                                    <div className='flex items-center justify-center h-full w-full'>
-                                        <img src={product.img} alt="" className='w-[60%] h-[60%]' />
-                                    </div>
-                                </div>
-
-                                <div className='w-fit mt-2 flex flex-col gap-1'>
-                                    <p className='font-semibold tracking-wider text-md'>{product.name}</p>
-                                    <div className='flex gap-4'>
-                                        <p className='text-md text-[#DB4444] font-semibold'>{product.discountprice}</p>
-                                        <del className='text-md text-gray-500 font-semibold'>{product.price}</del>
-                                    </div>
-                                    <div className='py-1 flex items-center gap-1.5 starsdiv'>
-                                        <img src={assets.Star} alt="" />
-                                        <img src={assets.Star} alt="" />
-                                        <img src={assets.Star} alt="" />
-                                        <img src={assets.Star} alt="" />
-                                        <img src={assets.Star} alt="" />
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    ))}
+                 {
+                    all_products.map((item, i) => {
+                        if(item.category === "productssecond")
+                        return (
+                            <Item key={i} id={item.id} name={item.name} image={item.img} discountprice={item.discountprice} price={item.price} discount={item.discount}/>
+                        )
+                    })
+                }
 
 
             </div>

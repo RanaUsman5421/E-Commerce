@@ -43,9 +43,16 @@ const Navbar = () => {
           </div>
 
           <div className='flex gap-5 items-center ml-7'>
-            <FontAwesomeIcon icon={faHeart} className='text-2xl'/>
-            <FontAwesomeIcon icon={faCartPlus} className='text-2xl'/>
-            <FontAwesomeIcon icon={faUser} className='text-2xl'/>
+            <Link to={'/wishlist'}>
+              <FontAwesomeIcon icon={faHeart} className='text-2xl'/>
+            </Link>
+            <Link to={'/cart'} className='relative'>
+              <FontAwesomeIcon icon={faCartPlus} className='text-2xl'/>
+              <div className='absolute -top-1 -right-2 bg-[#ff4141] text-white text-xs rounded-full w-4 h-4 flex items-center justify-center'>0</div>
+            </Link>
+            <Link to={'/account'}>
+              <FontAwesomeIcon icon={faUser} className='text-2xl'/>
+            </Link>
           </div>
         </div>
       </div>   

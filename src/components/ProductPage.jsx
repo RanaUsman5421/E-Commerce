@@ -1,28 +1,39 @@
-import React from 'react'
+import React  from 'react'
+import { useState, useContext } from 'react'
 import { assets, ProductsSecondData } from '../assets/assets'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart, faMinus, faPlus, faRecycle, faTruck } from '@fortawesome/free-solid-svg-icons'
+import { ProductsContext } from '../Context/ProductsContext'
+import { useParams } from 'react-router-dom'
+import Item from './Item'
+import { useLocation } from 'react-router-dom'
+
 
 const ProductPage = () => {
+    const path = useLocation().pathname;
+    const [count, setCount] = useState(0);
+     const { all_products } = useContext(ProductsContext);
+    const { productId } = useParams();
+    const product = all_products.find(e => e.id === parseInt(productId));
     return (
         <div className='px-[8%] mt-15'>
-            <p className='text-sm'> <span className='text-gray-400 text-sm'>Account/ Gaming / </span>Havic HV G-92 Gamepad</p>
+            <p className='text-sm'> <span className='text-gray-400 text-sm'>{path} </span>Havic HV G-92 Gamepad</p>
 
             <div className=' mt-10 flex justify-between'>
                 <div className='w-[60%] h-fit flex gap-10'>
                     <div className='w-[20%] flex flex-col items-center gap-15 h-fit'>
-                        <img src={assets.Productview1} alt="" className='bg-gray-100 p-5 w-[130px] rounded-md h-[100px]' />
-                        <img src={assets.Productview2} alt="" className='bg-gray-100 p-5 w-[130px] rounded-md h-[100px]' />
-                        <img src={assets.Productview3} alt="" className='bg-gray-100 p-5 w-[130px] rounded-md h-[100px]' />
-                        <img src={assets.Productview4} alt="" className='bg-gray-100 p-5 w-[130px] rounded-md h-[100px]' />
+                        <img src={product.img} alt="" className='bg-gray-100 p-5 w-[130px] rounded-md h-[100px] object-contain' />
+                        <img src={product.img} alt="" className='bg-gray-100 p-5 w-[130px] rounded-md h-[100px] object-contain'/>
+                        <img src={product.img} alt="" className='bg-gray-100 p-5 w-[130px] rounded-md h-[100px] object-contain' />
+                        <img src={product.img} alt="" className='bg-gray-100 p-5 w-[130px] rounded-md h-[100px] object-contain' />
                     </div>
-                    <div className='flex justify-center items-center w-[90%] bg-gray-100 rounded-md'><img src={assets.Productview5} alt="" /></div>
+                    <div className='flex justify-center items-center w-[90%] bg-gray-100 rounded-md'><img src={product.img} alt="" /></div>
                 </div>
 
 
 
                 <div className='w-[35%] h-fit px-5'>
-                    <h2 className='text-2xl font-semibold'>Havic HV G-92 Gamepad</h2>
+                    <h2 className='text-2xl font-semibold'>{product.name}</h2>
                     <div className='mt-3'>
                         <div className='flex items-center gap-1'>
                             <img src={assets.Star} alt="" />
@@ -33,7 +44,7 @@ const ProductPage = () => {
                             <p className='text-gray-500 text-sm'>{"(150 Reviews) | "}</p>
                             <span className='text-[#00FF66] text-sm'>In Stock</span>
                         </div>
-                        <p className='text-xl mt-3 font-semibold'>$192.00</p>
+                        <p className='text-xl mt-3 font-semibold'>{product.discountprice}</p>
                         <p className='mt-3 text-sm'>PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive.</p>
 
                         <hr className='text-gray-400 mt-5' />
@@ -59,9 +70,9 @@ const ProductPage = () => {
 
                         <div className='mt-4 h-12 flex gap-5 items-center w-full'>
                             <div className='flex items-center h-[100%]'>
-                                <button className='px-1 py-1 rounded-bl-md rounded-tl-md border group hover:bg-[#DB4444] border-r-0'><FontAwesomeIcon icon={faMinus} className='text-black group-hover:text-white'/> </button>
-                                <p className='px-4 border py-1  text-md'>2</p>
-                                <button className='px-1 py-1 rounded-br-md rounded-tr-md border border-l-0 hover:bg-[#DB4444] group'><FontAwesomeIcon icon={faPlus} className='text-black group-hover:text-white'/> </button>
+                                <button onClick={()=> count > 0 ? setCount(count-1): null} className='px-1 py-1 rounded-bl-md rounded-tl-md border group hover:bg-[#DB4444] border-r-0'><FontAwesomeIcon icon={faMinus} className='text-black group-hover:text-white'/> </button>
+                                <p className='px-4 border py-1  text-md'>{count}</p>
+                                <button onClick={()=>{setCount(count+1)}} className='px-1 py-1 rounded-br-md rounded-tr-md border border-l-0 hover:bg-[#DB4444] group'><FontAwesomeIcon icon={faPlus} className='text-black group-hover:text-white'/> </button>
                             </div>
 
                             <button className='py-2 px-6 bg-[#DB4444] text-white text-sm rounded-md'>Buy Now</button>
@@ -101,34 +112,12 @@ const ProductPage = () => {
             
             
                             {
-                                ProductsSecondData.map((product, index) => (
-                                    <div key={index} className='h-full w-[22%] min-w-[22%]  p-2'>
-                                        <div className='h-full'>
-                                            <div className='h-[60%] relative bg-gray-100 rounded-sm'>
-                                                <div className='flex items-center justify-center h-full w-full'>
-                                                    <img src={product.img} alt="" className='w-[60%] h-[60%]' />
-                                                </div>
-                                            </div>
-            
-                                            <div className='w-fit mt-2 flex flex-col gap-1'>
-                                                <p className='font-semibold tracking-wider text-md'>{product.name}</p>
-                                                <div className='flex gap-4'>
-                                                    <p className='text-md text-[#DB4444] font-semibold'>{product.discountprice}</p>
-                                                    <del className='text-md text-gray-500 font-semibold'>{product.price}</del>
-                                                </div>
-                                                <div className='py-1 flex items-center gap-1.5 starsdiv'>
-                                                    <img src={assets.Star} alt="" />
-                                                    <img src={assets.Star} alt="" />
-                                                    <img src={assets.Star} alt="" />
-                                                    <img src={assets.Star} alt="" />
-                                                    <img src={assets.Star} alt="" />
-                                                </div>
-                                            </div>
-                                        </div>
-            
-                                    </div>
-            
-                                ))}
+                                all_products.map((item, i) => {
+                        if(item.category === "productssecond")
+                        return (
+                            <Item key={i} id={item.id} name={item.name} image={item.img} discountprice={item.discountprice} price={item.price} discount={item.discount}/>
+                        )
+                    })}
             
             
                         </div>

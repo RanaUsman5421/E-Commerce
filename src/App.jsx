@@ -56,6 +56,26 @@ function App() {
     },
     {
       path: '/about',
+      element:<><Navbar/><About/><Footer/></>
+    },
+    {
+      path: '/checkout',
+      element:<><Navbar/><Checkout/><Footer/></>
+    },
+    {
+      path: '/account',
+      element:<><Navbar/><Account/><Footer/></>
+    },
+    {
+      path: '/wishlist',
+      element:<><Navbar/><Wishlist/><Footer/></>
+    },
+    {
+      path: '/cart',
+      element:<><Navbar/><Cart/><Footer/></>
+    },
+    {
+      path: '/product/:productId',
       element:<><Navbar/><ProductPage/><Footer/></>
     }
   ]);
